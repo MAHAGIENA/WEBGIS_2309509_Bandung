@@ -66,7 +66,7 @@ map.createPane('jembatanPane').style.zIndex = 1000; // paling atas!
 // LAYER: TUTUPAN LAHAN
 // ============================
 const landcover = new L.LayerGroup();
-$.getJSON("./Asset/data-spasial/data-spasial/landcover_ar.geojson", function (data) {
+$.getJSON("./Asset/data-spasial/landcover_ar.geojson", function (data) {
   L.geoJson(data, {
     pane: 'landcoverPane',
     style: function (feature) {
@@ -102,7 +102,7 @@ overlayMaps["Tutupan Lahan"] = landcover;
 // LAYER: BATAS ADMINISTRASI
 // ============================
 const adminKelurahanAR = new L.LayerGroup();
-$.getJSON("./Asset/data-spasial/data-spasial/admin_kelurahan_ln.geojson", function (data) {
+$.getJSON("./Asset/data-spasial/admin_kelurahan_ln.geojson", function (data) {
   L.geoJson(data, {
     pane: 'adminPane',
     style: {
@@ -130,7 +130,7 @@ const symbologyPoint = {
 };
 
 const jembatanPT = new L.LayerGroup();
-$.getJSON("./Asset/data-spasial/data-spasial/jembatan_pt.geojson", function (data) {
+$.getJSON("./Asset/data-spasial/jembatan_pt.geojson", function (data) {
   L.geoJson(data, {
     pane: 'jembatanPane',
     pointToLayer: (feature, latlng) => L.circleMarker(latlng, symbologyPoint)
