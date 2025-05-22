@@ -39,7 +39,8 @@ const overlayMaps = {};
 // ============================
 // FULLSCREEN & BUTTONS
 // ============================
-map.addControl(new L.Control.Fullscreen({ position: 'topleft' }));
+
+map.addControl(new L.Control.Fullscreen());
 
 const home = { lat: -6.903, lng: 107.6510, zoom: 12 };
 L.easyButton('fa-home', (btn, map) => {
